@@ -373,11 +373,12 @@ document.addEventListener("DOMContentLoaded", function() {
  
   }
  var booleanControl = new BooleanControl(document.querySelector(".boolean-control"));
+  var booleanControl = new BooleanControl(document.querySelectorAll(".boolean-control")[1]);
  
  
 });
  
- document.addEventListener("DOMContentLoaded", function() {
+ /*document.addEventListener("DOMContentLoaded", function() {
 	var BooleanControl = function(element) {
     var br= 1;
 	var self = this;
@@ -417,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function() {
  var booleanControl = new BooleanControl(document.querySelector(".boolean-control"));
  
  
-});
+});*/
  
  document.addEventListener("DOMContentLoaded", function() {
 	var TextControl = function(element) {
@@ -445,6 +446,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
   }
  var textControl = new TextControl(document.querySelector(".text-control"));
+ var textControl = new TextControl(document.querySelectorAll(".text-control")[1]);
  
  
 });
