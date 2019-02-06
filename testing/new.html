@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+body {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.radio {
+  display: none;
+}
+.radio ~ span {
+  font-size: 3rem;
+  filter: grayscale(100);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio:checked ~ span {
+  filter: grayscale(0);
+  font-size: 4rem;
+}
+
+#section0 {
+background-color: blue;  
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 16s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {background-color: #ff948e; }
+    25%  {background-color: #ffcc8d; }
+    50%  {background-color: #97ff9e; }
+    75%  {background-color: #abbeff; }
+    100% {background-color: #ff948e; }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color: #ff948e; }
+    25%  {background-color: #ffcc8d; }
+    50%  {background-color: #97ff9e; }
+    75%  {background-color: #abbeff; }
+    100% {background-color: #ff948e; }
+}
+/*Color Background*/
+
+</style>
+    <title>Hello, world!</title>
+  </head>
+ 
+  <body>
+    
+ <section id="section0" >
+  <h1>Was this page helpful?</h1>
+  <p>Let us know how we did</p>
+
+  <div class="container">
+  <div class="row">
+  
+    <div class="item">
+      <label for="0">
+      <input class="radio" type="radio" name="feedback" id="0" value="0">
+      <span>🤬</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="1">
+      <input class="radio" type="radio" name="feedback" id="1" value="1">
+      <span>🙁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="2">
+      <input class="radio" type="radio" name="feedback" id="2" value="2">
+      <span>😶</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="3">
+      <input class="radio" type="radio" name="feedback" id="3" value="3">
+      <span>😁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="4">
+      <input class="radio" type="radio" name="feedback" id="4" value="4">
+      <span>😍</span>
+    </label>
+    </div>
+
+  </div>
+  
+  </div>
+</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

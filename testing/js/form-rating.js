@@ -430,7 +430,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	self.containerElement.querySelector(".something").innerHTML = tr;
 	var textElement = self.containerElement.querySelector(".text-option");
  
-	 
+	  textElement.addEventListener("input" , function(e) {
+        
+        var newStatus = textElement.value;
+		
+		//Additon to log
+		tr = textElement.value;
+		//console.log("Text changed");
+		//console.log(tr);
+		document.getElementById("current_text").innerHTML = tr;
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });
  
       
  
