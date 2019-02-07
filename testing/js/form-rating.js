@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var self = this;
     self.containerElement = element;
 	//console.log(this)
-	document.getElementById("current_text").innerHTML = tr;
+	//document.getElementById("current_text").innerHTML = tr;
 	self.containerElement.querySelector(".something").innerHTML = tr;
 	var textElement = self.containerElement.querySelector(".text-option");
  
@@ -438,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		tr = textElement.value;
 		//console.log("Text changed");
 		//console.log(tr);
-		document.getElementById("current_text").innerHTML = tr;
+		//document.getElementById("current_text").innerHTML = tr;
 		self.containerElement.querySelector(".something").innerHTML = tr;
       });
  
