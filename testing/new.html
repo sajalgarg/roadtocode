@@ -33,14 +33,36 @@ p {
   align-items: center;
 }
 
-.item {
-  width: 90px;
-  height: 90px;
+
+
+@media (min-width: 300px) and (max-width: 400px) {
+  
+  .item {
+   width: 4rem;
+  height: 4rem;
+  border:5px;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
 }
+
+}
+@media (min-width: 401px) and (max-width: 600px) {
+  
+ .item {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+  
+  }
+
+
+
 .radio {
   display: none;
 }
@@ -82,6 +104,9 @@ background-color: blue;
     100% {background-color: #ff948e; }
 }
 /*Color Background*/
+.qfsize{
+    font-size: 1.5rem;
+}
 
 </style>
     <title>Hello, world!</title>
@@ -90,9 +115,8 @@ background-color: blue;
   <body>
     
  <section id="" >
-  <h1>Was this page helpful?</h1>
-  <p>Let us know how we did</p>
-
+  <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
+  <p>This is some random description that you probably dont need</p>
   <div class="container">
   <div class="row">
   
@@ -135,9 +159,9 @@ background-color: blue;
   
   </div>
 </section>
-<div>
+<!--<div>
 ✔️ ❌ 
-</div>
+</div>-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
