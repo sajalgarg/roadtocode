@@ -33,8 +33,19 @@ p {
   align-items: center;
 }
 
+@media (min-width: 200px) and (max-width: 299px) {
+  
+  .item {
+   width: 2rem;
+  height: 2rem;
+  border:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
 
-
+}
 @media (min-width: 300px) and (max-width: 400px) {
   
   .item {
@@ -117,7 +128,7 @@ background-color: blue;
     
  <div class="container" style="height:100vh">
   <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
-  <p>'😠','😦','😑','😀','😍'</p>
+  <p>This is some random description that you probably dont need</p>
  
   <div class="row">
   
@@ -138,13 +149,13 @@ background-color: blue;
     <div class="item">
       <label for="2">
       <input class="radio" type="radio" name="feedback" id="2" value="2">
-      <span>😶</span>
+      <span>😑</span>
     </label>
     </div>
 
     <div class="item">
       <label for="3">
-      <input class="radio" type="radio" name="feedback" id="3" value="3">
+      <input class="radio" type="radio" name="feedback" id="3" value="3" checked>
       <span>😁</span>
     </label>
     </div>
@@ -170,7 +181,7 @@ background-color: blue;
       <label for="10">
       <input class="radio" type="radio" name="feedback1" id="10" value="0">
       <span>😡 </span>
-	  <span><h3>Bad and a kdkasdkadskef</h3></span>
+	  <span><h5>Terrible</h5></span>
 	  
     </label>
     </div>
@@ -178,28 +189,28 @@ background-color: blue;
     <div class="item">
       <label for="11">
       <input class="radio" type="radio" name="feedback1" id="11" value="1">
-      <span>🙁<br><h3>Bad</h3></span>
+      <span>🙁<br><h5>Bad</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="12">
       <input class="radio" type="radio" name="feedback1" id="12" value="2">
-      <span>😶<br><h3>Bad</h3></span>
+      <span>😶<br><h5>Okay</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="13">
-      <input class="radio" type="radio" name="feedback1" id="13" value="3">
-      <span>😁<br><h3>Bad</h3></span>
+      <input class="radio" type="radio" name="feedback1" id="13" value="3" checked>
+      <span>😁<br><h5>Good</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="14">
       <input class="radio" type="radio" name="feedback1" id="14" value="4">
-      <span>😍<br><h3>Bad</h3></span>
+      <span>😍<br><h5>Great</h5></span>
 	  
     </label>
     </div>
@@ -216,14 +227,14 @@ background-color: blue;
     <div class="item">
       <label for="30">
       <input class="radio" type="radio" name="feedback3" id="30" value="0">
-      <span>✔️ </span>
+      <span>❌</span>
     </label>
     </div>
 
     <div class="item">
       <label for="31">
-      <input class="radio" type="radio" name="feedback3" id="31" value="1">
-      <span>❌</span>
+      <input class="radio" type="radio" name="feedback3" id="31" value="1" checked>
+      <span>✔️ </span>
     </label>
     </div>
 
@@ -231,7 +242,24 @@ background-color: blue;
   </div>
   
  </div>
- 
+ <div class ="container" style="height:100vh">
+ <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
+  <p>This is some random description that you probably dont need</p>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+ </div>
+  <div class ="container" style="height:100vh">
+ <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
+  <p>This is some random description that you probably dont need</p>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea2">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+  </div>
+
+ </div>
 </body>
 <!--<div>
 ✔️ ❌ 
