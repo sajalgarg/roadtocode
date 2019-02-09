@@ -155,7 +155,7 @@ background-color: blue;
   <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
   <p>This is some random description that you probably dont need</p>
  
-  <div class="row" id="a1">
+  <div class="row text-control">
   
     <div class="item">
       <label for="0">
@@ -191,7 +191,7 @@ background-color: blue;
       <span>😍</span>
     </label>
     </div>
-
+<div id="something"class="something"></div>
   </div>
   
  </div>
@@ -200,7 +200,7 @@ background-color: blue;
   <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
   <p>This is some random description that you probably dont need</p>
   
-  <div class="row">
+  <div class="row" >
   
     <div class="item">
       <label for="10">
@@ -239,7 +239,7 @@ background-color: blue;
 	  
     </label>
     </div>
-
+<div id="something1" class="something"></div>
   </div>
   </div>
     
@@ -301,15 +301,116 @@ background-color: blue;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script>
-console.log(document.querySelector('input[name="feedback"]:checked').value);
-var rates = document.getElementsByName('feedback');
-var rate_value;
-for(var i = 0; i < rates.length; i++){
-    if(rates[i].checked){
-        rate_value = rates[i].value;
-    }
-}
-console.log(rate_value);
+	
+	/*$(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='feedback']:checked").val();
+            if(radioValue){
+                console.log("Your are feedback - " + radioValue);
+			//	document.getElementById("something").innerHTML=radioValue;
+            }
+        });
+        
+    });
+	$(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='feedback1']:checked").val();
+            if(radioValue){
+                console.log("Your are feedback1 - " + radioValue);
+								//document.getElementById("something1").innerHTML=radioValue;
+
+            }
+        });
+        
+    });*/
+//console.log(document.querySelector('input[name="feedback"]:checked').value);
+
+ document.addEventListener("DOMContentLoaded", function() {
+ 
+	var TextControl = function(element) {
+    var tr= 3;
+	var self = this;
+    self.containerElement = element;
+	console.log(this);
+	//console.log(this)
+	//document.getElementById("current_text").innerHTML = tr;
+	self.containerElement.querySelector(".something").innerHTML = tr;
+	var textElement = self.containerElement.querySelector(".item");
+	//console.log(textElement);
+		var textElement1 = self.containerElement.querySelectorAll(".item")[1];
+console.log(textElement1);
+    //var textElement1 = self.containerElement.querySelectorALL(".item")[1];
+    var textElement2 = self.containerElement.querySelectorAll(".item")[2];
+	//console.log(textElement2);
+  //  var textElement3 = self.containerElement.querySelectorALL(".item")[3];
+    //var textElement4 = self.containerElement.querySelectorAll(".item")[4];
+    
+	
+	
+	
+
+      textElement.addEventListener("ontouchend" in document ? "touchend" : "click", function(e) {
+        
+         console.log(textElement.querySelector('input[name="feedback"]:checked'));
+		//tr = textElement.querySelector('input[name="feedback"]:checked').value;
+		console.log("value changed");
+		
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });
+	  textElement1.addEventListener("click" , function(e) {
+        
+     tr = $("input[name='feedback']:checked").val();
+		tr = $('textElement.querySelector("input[name='feedback']:checked")').val();
+		
+		console.log("value changed");
+		
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });
+	  textElement2.addEventListener("ontouchend" in document ? "touchend" : "click", function(e) {
+        
+     
+		tr = textElement.querySelector('input[name="feedback"]:checked').value;
+		console.log("value changed");
+		
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });
+	  /*texElement3.addEventListener("ontouchend" in document ? "touchend" : "click", function(e) {
+        
+     
+		tr = textElement.querySelector('input[name="feedback"]:checked').value;
+		console.log("value changed");
+		
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });
+	  texElement4.addEventListener("ontouchend" in document ? "touchend" : "click", function(e) {
+        
+     
+		tr = textElement.querySelector('input[name="feedback"]:checked').value;
+		console.log("value changed");
+		
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });*/
+	  /*textElement.addEventListener("click" , function(e) {
+        
+        //var newStatus = textElement.value;
+		tr = textElement.querySelector('input[name="feedback"]:checked').value;
+		console.log("value changed");
+		//Additon to log
+		//tr = textElement.value;
+		//console.log("Text changed");
+		//console.log(tr);
+		//document.getElementById("current_text").innerHTML = tr;
+		self.containerElement.querySelector(".something").innerHTML = tr;
+      });*/
+ 
+      
+ 
+  }
+ var textControl = new TextControl(document.querySelector(".text-control"));
+ 
+ 
+ 
+});
 	</script>
 	
 	</html>

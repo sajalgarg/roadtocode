@@ -18,6 +18,116 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
 <link href="css/form-rating.css" rel="stylesheet">
 <style>
+body {
+  margin: 0;
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 200px) and (max-width: 299px) {
+  
+  .item {
+   width: 2rem;
+  height: 2rem;
+  border:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  
+  .item {
+   width: 4rem;
+  height: 4rem;
+  border:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+}
+@media (min-width: 401px) and (max-width: 600px) {
+  
+ .item {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+  
+  }
+
+
+
+.radio {
+  display: none;
+}
+.radio ~ span {
+  font-size: 3rem;
+  filter: grayscale(100);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio:checked ~ span {
+  filter: grayscale(0);
+  font-size: 4rem;
+}
+
+#section0 {
+background-color: blue;  
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 16s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {background-color: #ff948e; }
+    25%  {background-color: #ffcc8d; }
+    50%  {background-color: #97ff9e; }
+    75%  {background-color: #abbeff; }
+    100% {background-color: #ff948e; }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color: #ff948e; }
+    25%  {background-color: #ffcc8d; }
+    50%  {background-color: #97ff9e; }
+    75%  {background-color: #abbeff; }
+    100% {background-color: #ff948e; }
+}
+/*Color Background*/
+.qfsize{
+    font-size: 1.5rem;
+}
 
 </style>
   </head>
@@ -71,7 +181,55 @@
       </div>
     </section>-->
 <!-- #FDFCDE-->
+<div class="container" style="height:100vh">
+  <p class="qfsize">MAke this question really long for all to get an idea what we are upto with this form ?</p>
+  <p>This is some random description that you probably dont need</p>
+ 
+  <div class="row tex-control">
+  
+    <div class="item">
+      <label for="0">
+      <input class="radio" type="radio" name="feedback" id="0" value="0">
+      <span>😡 </span>
+    </label>
+    </div>
 
+    <div class="item">
+      <label for="1">
+      <input class="radio" type="radio" name="feedback" id="1" value="1">
+      <span>🙁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="2">
+      <input class="radio" type="radio" name="feedback" id="2" value="2">
+      <span>😑</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="3">
+      <input class="radio" type="radio" name="feedback" id="3" value="3" checked>
+      <span>😁</span>
+    </label>
+    </div>
+
+    <div class="item">
+      <label for="4">
+      <input class="radio" type="radio" name="feedback" id="4" value="4">
+      <span>😍</span>
+    </label>
+    </div>
+<div id="something" ></div>
+  </div>
+  
+ </div>
+ 
+ 
+ 
+ 
+ 
  <section id="q" class="" style="background-color:white ; height:100vh" >
       <div class="container">
 	  <div class="row">
@@ -116,7 +274,7 @@
 			<br>
 			<div >Current text <span id="current_text"></span></div>
 			<center>
-			<a class="btn btn-primary btn-lg btn-raised js-scroll-trigger btn-md-purple-500" href="#q">Previous</a>
+			<a class="btn btn-primary btn-lg btn-raised js-scroll-trigger btn-md-purple-500" href="#q00">Previous</a>
 
 			<a class="btn btn-primary btn-lg btn-raised js-scroll-trigger btn-md-purple-500" href="#q0">Next</a>
 				  
@@ -682,6 +840,19 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 <script src="js/form-rating.js"></script>
+<script>
+$(document).ready(function(){
+document.getElementById("something").innerHTML=3;
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='feedback']:checked").val();
+            if(radioValue){
+                console.log("Your are feedback - " + radioValue);
+				document.getElementById("something").innerHTML=radioValue;
+            }
+        });
+        
+    });
+	</script>
 
   </body>
 
