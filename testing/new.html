@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<style>
 body {
   margin: 0;
   text-align: center;
@@ -84,9 +85,15 @@ p {
   transition: 0.3s;
 }
 
-.radio:checked ~ span {
+.radio:checked .h5 {
+  
+  font-weight:1000;
+  
+}
+.radio:checked ~ span  {
   filter: grayscale(0);
   font-size: 4rem;
+  
 }
 
 #section0 {
@@ -160,7 +167,7 @@ background-color: blue;
     <div class="item">
       <label for="0">
       <input class="radio" type="radio" name="feedback" id="0" value="0">
-      <span>😡 </span>
+      <span><i class="fas fa-angry " style="color:red"></i><br><h5 class="text">No</h5></span>
     </label>
     </div>
 
@@ -205,8 +212,7 @@ background-color: blue;
     <div class="item">
       <label for="10">
       <input class="radio" type="radio" name="feedback1" id="10" value="0">
-      <span>😡 </span>
-	  <span><h5>Terrible</h5></span>
+      <span>😡<br><h5 class="text"> Terrible</h5></span>
 	  
     </label>
     </div>
@@ -214,28 +220,28 @@ background-color: blue;
     <div class="item">
       <label for="11">
       <input class="radio" type="radio" name="feedback1" id="11" value="1">
-      <span>🙁<br><h5>Bad</h5></span>
+      <span>🙁<br><h5 class="text">Bad</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="12">
       <input class="radio" type="radio" name="feedback1" id="12" value="2">
-      <span>😶<br><h5>Okay</h5></span>
+      <span>😶<br><h5 class="text">Okay</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="13">
       <input class="radio" type="radio" name="feedback1" id="13" value="3" checked>
-      <span>😁<br><h5>Good</h5></span>
+      <span>😁<br><h5 class="text">Good</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="14">
       <input class="radio" type="radio" name="feedback1" id="14" value="4">
-      <span>😍<br><h5>Great</h5></span>
+      <span>😍<br><h5 class="text">Great</h5></span>
 	  
     </label>
     </div>
@@ -252,14 +258,14 @@ background-color: blue;
     <div class="item">
       <label for="30">
       <input class="radio" type="radio" name="feedback3" id="30" value="0">
-      <span>❌</span>
+      <span><i class="fas fa-times-circle " style="color:red"></i><br><h5 class="text">No</h5></span>
     </label>
     </div>
 
     <div class="item">
       <label for="31">
       <input class="radio" type="radio" name="feedback3" id="31" value="1" checked>
-      <span>✔️ </span>
+      <span><i class="fas fa-check-circle " style="color:green"></i><br><h5 class="text">Yes</h5></span>
     </label>
     </div>
 
